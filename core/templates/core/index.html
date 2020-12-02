@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+
+    <script src="{% static 'core/js/main.js' %}"></script>
+    <script src="{% static 'core/js/apiHandler.js' %}"></script>
+    <script src="{% static 'core/js/formHandler.js' %}"></script>
+    <script src="{% static 'core/js/contactsHandler.js' %}"></script>
+
+</head>
+<body onload="main()">
+    <h1>All contacts</h1>
+
+<!-- LOGIN FORM START -->
+    <div class="form-popup" id="loginForm" hidden>
+        <label for="username"><b>Username</b></label>
+        <input type="text" id="username" name="username" required>
+        <br>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <button type="button" onclick="loginForm()">Login</button>
+    </div>
+<!-- LOGIN FORM END -->
+
+<!-- ADD CONTACTS FORM START -->
+    <div class="form-popup" id="addContactForm" hidden>
+        <label for="code_name"><b>Code Name</b></label>
+        <input type="text" id="code_name" name="code_name" required>
+        <br>
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="phone"><b>Phone</b></label>
+        <input type="text" id="phone" name="phone" required>
+        <br>
+
+        <button type="button" onclick="addContact()">Add</button>
+        <button type="button" onclick="closeForm()">Close</button>
+    </div>
+<!-- ADD CONTACTS FORM END -->
+
+    <button id="addContactButton" onclick="openForm()">Add Contact</button>
+    <p id="contacts"></p>
+
+</body>
+</html>
