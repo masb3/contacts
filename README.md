@@ -1,4 +1,4 @@
-# Contacts API
+# Contacts API server
  - Show / add contacts
  - REST API supporting JSON
  - DRF + Simple JWT
